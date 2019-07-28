@@ -10,7 +10,7 @@ public class CalcApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CalcApplication.class, args);
-		System.out.println("changed");
+		System.out.println("changed 2");
 		
 	}
 
