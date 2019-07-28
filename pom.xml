@@ -11,6 +11,7 @@
 	<groupId>com.daas</groupId>
 	<artifactId>calc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>calc</name>
 	<description>Demo project for Spring Boot</description>
 
