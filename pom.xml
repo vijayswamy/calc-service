@@ -11,7 +11,7 @@
 	<groupId>com.daas</groupId>
 	<artifactId>calc</artifactId>
 	<version>1.0</version>	
-	<name>calc</name> 
+	<packaging>jar</packaging>
 	
 	<properties>
 		<java.version>1.8</java.version>
