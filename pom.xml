@@ -10,10 +10,9 @@
 	</parent>
 	<groupId>com.daas</groupId>
 	<artifactId>calc</artifactId>
-	<version>0.0.1-SNAPSHOT</version>	
+	<version>1.0</version>	
 	<name>calc</name> 
-	<description>Demo project for Spring Boot</description>
-
+	
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -46,22 +45,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-			    <groupId>org.codehaus.mojo</groupId>
-			    <artifactId>properties-maven-plugin</artifactId>
-			    <version>1.0.0</version>
-			    <executions>
-				<execution>
-				    <phase>initialize</phase>
-				    <goals>
-					<goal>write-project-properties</goal>
-				    </goals>
-				    <configuration>
-					<outputFile>${project.build.directory}/build.properties</outputFile>
-				    </configuration>
-				</execution>
-			    </executions>
-			</plugin>
+			
 			
 		</plugins>
 	</build>
