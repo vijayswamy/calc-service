@@ -4,8 +4,6 @@ pipeline {
     stage('Unit Test') {
       steps {
         sh 'mvn clean test surefire-report:report'
-        sh '''pwd
-ls /var/lib/jenkins/workspace/blue-ocean-github_master/target'''
       }
     }
     stage('Build') {
@@ -17,6 +15,7 @@ ls /var/lib/jenkins/workspace/blue-ocean-github_master/target'''
       steps {
         archiveArtifacts 'target/site/*.html,target/*.jar'
         echo 'Pushing to Nexus here'
+        realtimeJUnit(testResults: 'target/surefire-reports/*.xml')
       }
     }
   }
