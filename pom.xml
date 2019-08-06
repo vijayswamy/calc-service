@@ -48,6 +48,7 @@
 			
 			
 		</plugins>
+		<finalName>calc-service</finalName>
 	</build>
 
 </project>
