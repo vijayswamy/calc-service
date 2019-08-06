@@ -4,7 +4,8 @@ pipeline {
     stage('Unit Test') {
       steps {
         sh 'mvn clean test surefire-report:report'
-        sh 'pwd'
+        sh '''pwd
+ls /var/lib/jenkins/workspace/blue-ocean-github_master/target'''
       }
     }
     stage('Build') {
