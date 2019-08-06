@@ -4,7 +4,7 @@ pipeline {
     stage('Unit Test') {
       steps {
         sh 'mvn clean test surefire-report:report'
-        realtimeJUnit(allowEmptyResults: true, testResults: 'target/**/*.xml', healthScaleFactor: 1)
+        realtimeJUnit(allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml', healthScaleFactor: 1)
       }
     }
     stage('Build') {
