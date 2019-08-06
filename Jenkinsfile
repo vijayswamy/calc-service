@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Archieve') {
       steps {
-        archiveArtifacts 'target/*.html,target/*.jar'
+        archiveArtifacts 'target/site/*.html,target/*.jar'
       }
     }
     stage('Deploy') {
