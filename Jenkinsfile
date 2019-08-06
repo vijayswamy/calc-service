@@ -1,19 +1,21 @@
 pipeline {
   agent any
   stages {
+    stage('Unit Test') {
+      steps {
+        sh 'mvn clean test surefire-report:report'
+        realtimeJUnit(allowEmptyResults: true, testResults: 'target/**/*.xml', healthScaleFactor: 1)
+      }
+    }
     stage('Build') {
       steps {
-        sh 'mvn clean package surefire-report:report'
+        sh 'mvn package'
       }
     }
-    stage('Archieve') {
+    stage('Archieve Artifacts') {
       steps {
         archiveArtifacts 'target/site/*.html,target/*.jar'
-      }
-    }
-    stage('Deploy') {
-      steps {
-        echo '"Deploying jar to server"'
+        echo 'Pushing to Nexus here'
       }
     }
   }
