@@ -15,7 +15,7 @@ public class CalcApplicationTests {
 
 
 
-
+              /* Write test cases here*/
 	@Test
 	public void contextLoads() {
 
