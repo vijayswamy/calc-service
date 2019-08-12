@@ -16,6 +16,11 @@ public class CalcController {
     @Autowired
     CalcService calcService;
 
+    @GetMapping(path="/test")
+    public String test(){
+        return "Hello world!";
+    }
+    
     @GetMapping(path="/add/{n1}/{n2}")
     public int add(@PathVariable int n1,@PathVariable int n2){
         return calcService.add(n1,n2);
