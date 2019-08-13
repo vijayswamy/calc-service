@@ -12,13 +12,14 @@ public class CalcControllerTest {
         assertEquals(true,str instanceof String);
     }  
   
+    /*
   @Test
     public void testAddition() {
         int sum = calcController.add(2,3);
         assertEquals(5,sum );
 
     }
-    /*
+    
     @Test
     public void testDifference() {
         int diff = calcService.difference(15,10);
