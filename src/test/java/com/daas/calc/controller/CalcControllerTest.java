@@ -9,7 +9,7 @@ public class CalcControllerTest {
    @Test
     public void testApp() {
         String str = calcController.test();
-        assertEquals(str instanceof String,str );
+        assertEquals(true,str instanceof String);
     }  
   
  /* @Test
