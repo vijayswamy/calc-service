@@ -18,7 +18,7 @@ public class CalcController {
 
     @GetMapping(path="/test")
     public String test(){
-        return "Hello world.";
+        return "Hello world 2.";
     }
     
     @GetMapping(path="/add/{n1}/{n2}")
